@@ -1,11 +1,12 @@
 package com.bee.shop.shipping;
 
-public class ShippingFeeVisitorFactory {
+public enum ShippingFeeVisitorFactory {
+    INSTANCE;
 
     public ShippingFeeVisitor get(ShippingOption type) {
         switch (type) {
             case WDT:
-                return WDTShippingFeeVisitor.INSTANCE;
+                return WdtShippingFeeVisitor.INSTANCE;
             case DOMESTIC:
                 return DomesticShippingFeeVisitor.INSTANCE;
             case EXPORT:
