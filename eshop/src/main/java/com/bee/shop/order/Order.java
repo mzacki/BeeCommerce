@@ -8,11 +8,16 @@ import java.math.BigDecimal;
 
 public interface Order {
 
-        void addItem(Item item);
-        void removeItem(Item item);
-        void setDiscountOnItem(Item item, BigDecimal discount);
-        void setShippingOption(ShippingOption shippingOption);
-        void setPaymentMethod(PaymentMethod paymentMethod);
-        void makePayment(PaymentVisitor paymentVisitor);
+    void addItem(Item item);
+
+    void removeItem(Item item);
+
+    void setDiscountOnItem(Item item, BigDecimal discount);
+
+    void setShippingOption(ShippingOption shippingOption);
+
+    void setPaymentMethod(PaymentMethod paymentMethod);
+
+    void makePayment(PaymentVisitor paymentVisitor);
 
 }
