@@ -1,13 +1,12 @@
-package com.bee.shop.payment;
+package com.bee.eshop.structure.payment;
 
 import java.math.BigDecimal;
 
-public class Paypal extends Payment {
+public class CardPayment extends Payment {
 
-    public Paypal() {
-    }
+    public CardPayment() {}
 
-    public Paypal(BigDecimal amount) {
+    public CardPayment(BigDecimal amount) {
         super(amount);
     }
 

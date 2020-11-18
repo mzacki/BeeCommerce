@@ -1,9 +1,9 @@
-package com.bee.shop.order;
+package com.bee.eshop.structure.order;
 
-import com.bee.shop.payment.PaymentMethod;
-import com.bee.shop.payment.PaymentVisitor;
-import com.bee.shop.product.Item;
-import com.bee.shop.shipping.ShippingOption;
+import com.bee.eshop.structure.payment.PaymentMethod;
+import com.bee.eshop.structure.payment.PaymentVisitor;
+import com.bee.eshop.structure.product.Item;
+import com.bee.eshop.structure.shipping.ShippingOption;
 import java.math.BigDecimal;
 
 public interface Order {

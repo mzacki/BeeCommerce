@@ -1,4 +1,4 @@
-package com.bee.shop.payment;
+package com.bee.eshop.structure.payment;
 
 public class PaymentFactory {
 

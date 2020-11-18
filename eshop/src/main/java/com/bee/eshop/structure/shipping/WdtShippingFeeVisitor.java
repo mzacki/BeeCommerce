@@ -1,21 +1,22 @@
-package com.bee.shop.shipping;
+package com.bee.eshop.structure.shipping;
 
-import com.bee.shop.product.ByWeightProduct;
-import com.bee.shop.product.CompoundProduct;
-import com.bee.shop.product.StandardProduct;
+import com.bee.eshop.structure.product.ByWeightProduct;
+import com.bee.eshop.structure.product.CompoundProduct;
+import com.bee.eshop.structure.product.StandardProduct;
 import java.math.BigDecimal;
 
-public enum ExportShippingFeeVisitor implements ShippingFeeVisitor{
+
+public enum WdtShippingFeeVisitor implements ShippingFeeVisitor {
     INSTANCE;
 
     @Override
     public BigDecimal visit(StandardProduct standardProduct) {
-        return BigDecimal.valueOf(10);
+        return BigDecimal.valueOf(50);
     }
 
     @Override
     public BigDecimal visit(ByWeightProduct byWeightProduct) {
-        return byWeightProduct.getWeight().multiply(BigDecimal.valueOf(25));
+        return byWeightProduct.getWeight().multiply(BigDecimal.valueOf(10));
     }
 
     @Override
@@ -24,7 +25,7 @@ public enum ExportShippingFeeVisitor implements ShippingFeeVisitor{
                 .stream()
                 .map(p -> p.getShippingCost(this))
                 .reduce(BigDecimal.ZERO, BigDecimal::add)
-                .multiply(BigDecimal.valueOf(1.1));
+                .multiply(BigDecimal.valueOf(0.9));
     }
 
 }

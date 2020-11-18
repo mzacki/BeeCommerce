@@ -1,4 +1,4 @@
-package com.bee.shop.shipping;
+package com.bee.eshop.structure.shipping;
 
 public enum ShippingOption {
     WDT,

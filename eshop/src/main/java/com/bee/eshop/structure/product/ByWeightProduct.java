@@ -1,28 +1,28 @@
-package com.bee.shop.product;
+package com.bee.eshop.structure.product;
 
-import com.bee.shop.shipping.ShippingFeeVisitor;
+import com.bee.eshop.structure.shipping.ShippingFeeVisitor;
 import java.math.BigDecimal;
 
-public class StandardProduct implements Item {
+public class ByWeightProduct implements Item {
 
-    private final String name;
-    private final BigDecimal price;
     private final BigDecimal weight;
+    private final BigDecimal price;
+    private final String name;
 
-    public StandardProduct(String name, BigDecimal price, BigDecimal weight) {
+    public ByWeightProduct(String name, BigDecimal weight, BigDecimal price) {
         this.name = name;
-        this.price = price;
         this.weight = weight;
+        this.price = price;
     }
 
     @Override
     public String getName() {
-        return name;
+        return null;
     }
 
     @Override
     public BigDecimal getPrice() {
-        return price;
+        return weight.multiply(price);
     }
 
     @Override
@@ -39,7 +39,9 @@ public class StandardProduct implements Item {
     public String toString() {
         return "Product: " + name +
                 ", weight: " + weight +
-                ", price: " + price;
+                ", price per kg: " + price;
     }
 
 }
+
+

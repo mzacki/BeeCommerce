@@ -1,4 +1,4 @@
-package com.bee.shop.payment;
+package com.bee.eshop.structure.payment;
 
 import java.math.BigDecimal;
 

@@ -1,6 +1,6 @@
-package com.bee.shop.product;
+package com.bee.eshop.structure.product;
 
-import com.bee.shop.shipping.ShippingFeeVisitor;
+import com.bee.eshop.structure.shipping.ShippingFeeVisitor;
 import java.math.BigDecimal;
 import java.util.List;
 

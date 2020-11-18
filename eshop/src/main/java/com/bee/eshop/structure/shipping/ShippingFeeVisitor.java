@@ -1,8 +1,8 @@
-package com.bee.shop.shipping;
+package com.bee.eshop.structure.shipping;
 
-import com.bee.shop.product.ByWeightProduct;
-import com.bee.shop.product.CompoundProduct;
-import com.bee.shop.product.StandardProduct;
+import com.bee.eshop.structure.product.ByWeightProduct;
+import com.bee.eshop.structure.product.CompoundProduct;
+import com.bee.eshop.structure.product.StandardProduct;
 import java.math.BigDecimal;
 
 

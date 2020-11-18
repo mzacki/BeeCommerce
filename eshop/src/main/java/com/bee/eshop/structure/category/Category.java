@@ -1,6 +1,6 @@
-package com.bee.shop.category;
+package com.bee.eshop.structure.category;
 
-import com.bee.shop.product.Item;
+import com.bee.eshop.structure.product.Item;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
