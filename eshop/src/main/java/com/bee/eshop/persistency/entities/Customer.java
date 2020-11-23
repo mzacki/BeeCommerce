@@ -1,5 +1,7 @@
 package com.bee.eshop.persistency.entities;
 
+
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,8 +20,13 @@ public class Customer {
     private long customerId;
     private String firstName;
     private String lastName;
+    private Date registrationDate = new Date();
+    // one to one
+    //private Account account;
+    // one to many
+    //private List<Order> orders;
 
-    private Customer() {
+    protected Customer() {
        // for hibernate use only
     }
 
@@ -60,4 +67,27 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    public Long getRegistrationDate() {
+        return registrationDate.getTime();
+    }
+
+    public void setRegistrationDate(Date registrationDate) {
+        this.registrationDate = new Date(registrationDate.getTime());
+    }
+
+   /* public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }*/
 }
