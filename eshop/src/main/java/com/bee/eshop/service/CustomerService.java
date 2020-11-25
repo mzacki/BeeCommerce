@@ -1,6 +1,6 @@
 package com.bee.eshop.service;
 
-import com.bee.eshop.persistency.entities.Customer;
+import com.bee.eshop.persistency.entities.CustomerEntity;
 import com.bee.eshop.persistency.filters.CustomerFilter;
 import com.bee.eshop.persistency.repo.CustomerRepository;
 import java.util.List;
@@ -16,7 +16,7 @@ public class CustomerService {
     }
 
 
-    public List<Customer> getCustomers(CustomerFilter filter) {
+    public List<CustomerEntity> getCustomers(CustomerFilter filter) {
         return customerRepository.findAll(filter.toSpecification());
     }
 

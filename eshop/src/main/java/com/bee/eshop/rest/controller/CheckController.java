@@ -1,6 +1,6 @@
 package com.bee.eshop.rest.controller;
 
-import com.bee.eshop.persistency.entities.Customer;
+import com.bee.eshop.persistency.entities.CustomerEntity;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,8 +30,8 @@ public class CheckController {
     }
 
     @GetMapping("/check")
-    public Customer example4(@Param("firstName") String firstName, @Param("lastName") String lastName) {
-        return new Customer("First name " + firstName, "Last name " + lastName);
+    public CustomerEntity example4(@Param("firstName") String firstName, @Param("lastName") String lastName) {
+        return new CustomerEntity("First name " + firstName, "Last name " + lastName, account);
     }
 
 }

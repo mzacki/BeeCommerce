@@ -1,7 +1,6 @@
 package com.bee.eshop.persistency.filters;
 
-import com.bee.eshop.persistency.entities.Customer;
-import java.util.Date;
+import com.bee.eshop.persistency.entities.CustomerEntity;
 import org.springframework.data.jpa.domain.Specification;
 
 public class CustomerFilter {
@@ -14,7 +13,7 @@ public class CustomerFilter {
     //private boolean noAccount;
     //private List<Orders> orders;
 
-    public Specification<Customer> toSpecification() {
+    public Specification<CustomerEntity> toSpecification() {
         return CustomerSpecification.from(this);
     }
 

@@ -1,18 +1,18 @@
 package com.bee.eshop.persistency.entities;
 
-
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  * Created by Matt on 10.09.2018 at 20:04.
  */
 
 @Entity
-public class Customer {
+public class CustomerEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,18 +21,20 @@ public class Customer {
     private String firstName;
     private String lastName;
     private Date registrationDate = new Date();
-    // one to one
-    //private Account account;
+
+    @OneToOne
+    private AccountEntity accountEntity;
     // one to many
     //private List<Order> orders;
 
-    protected Customer() {
-       // for hibernate use only
+    protected CustomerEntity() {
+        // for hibernate use only
     }
 
-    public Customer(String firstName, String lastName) {
+    public CustomerEntity(String firstName, String lastName, AccountEntity accountEntity) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.accountEntity = accountEntity;
     }
 
     public long getId() {
@@ -75,15 +77,15 @@ public class Customer {
         this.registrationDate = new Date(registrationDate.getTime());
     }
 
-   /* public Account getAccount() {
-        return account;
+    public AccountEntity getAccount() {
+        return accountEntity;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setAccountEntity(AccountEntity accountEntity) {
+        this.accountEntity = accountEntity;
     }
 
-    public List<Order> getOrders() {
+    /*public List<Order> getOrders() {
         return orders;
     }
 
